@@ -3,22 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Viar - Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Full Stack Developer specializing in modern web applications and digital experiences">
+    <meta name="keywords" content="full stack developer, web developer, react, node.js, portfolio">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">V</div>
+            <div class="loading-text">Loading Portfolio...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">YOUR NAME</a>
+                <a href="#home">VIAR</a>
             </div>
             <div class="nav-menu">
                 <a href="#home" class="nav-link">01 home</a>
                 <a href="#about" class="nav-link">02 about</a>
                 <a href="#work" class="nav-link">03 work</a>
-                <a href="#contact" class="nav-link">04 contact</a>
+                <a href="#skills" class="nav-link">04 skills</a>
+                <a href="#contact" class="nav-link">05 contact</a>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
             </div>
             <div class="hamburger">
                 <span></span>
@@ -30,25 +52,33 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="line">Specializing in refined</span>
-                    <span class="line">digital web experiences</span>
-                    <span class="line">with a focus on modern,</span>
-                    <span class="line">responsive, and interactive content.</span>
+                <div class="hero-greeting" data-aos="fade-right">
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                    <span class="line">Viar</span>
+                    <span class="line gradient-text">Full Stack Developer</span>
                 </h1>
-                <p class="hero-subtitle">
-                    Partnering with agencies and brands that value design and development integrity.
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                    Specializing in modern web applications and digital experiences with a focus on 
+                    clean code, beautiful design, and exceptional user experiences.
                 </p>
-                <p class="hero-description">
-                    Delivering highly executed front-end user experiences by paying close attention
-                    to the nuances of design, optimization, and performance.
-                </p>
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#work" class="cta-button primary">View My Work</a>
+                    <a href="#contact" class="cta-button secondary">Get In Touch</a>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
-            <div class="scroll-line"></div>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span class="scroll-text">Scroll Down</span>
         </div>
     </section>
 
@@ -90,10 +120,10 @@
                 </div>
 
                 <div class="about-profile">
-                    <div class="profile-content">
+                    <div class="profile-content" data-aos="fade-left">
                         <h2 class="about-title">About Me</h2>
                         <p class="about-text">
-                            I'm a passionate full-stack developer with over 5 years of experience 
+                            I'm a passionate full-stack developer with over 3 years of experience 
                             creating digital experiences that combine beautiful design with robust functionality. 
                             I believe in writing clean, maintainable code and creating user interfaces 
                             that are both intuitive and engaging.
@@ -103,6 +133,20 @@
                             into technical solutions that drive results. I stay current with the latest 
                             technologies and best practices to ensure every project is built for the future.
                         </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="50">0</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="3">0</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="25">0</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,6 +233,145 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3 class="skill-title">Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">React.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Vue.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Next.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="skill-title">Backend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Express.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Django</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-title">Database</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="78%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Redis</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="skill-title">DevOps & Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Linux</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -203,7 +386,7 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <span class="contact-label">Email</span>
-                            <a href="mailto:hello@yourname.com" class="contact-value">hello@yourname.com</a>
+                            <a href="mailto:viar@gmail.com" class="contact-value">viar@gmail.com</a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-label">Location</span>
@@ -212,10 +395,22 @@
                     </div>
 
                     <div class="social-links">
-                        <a href="https://github.com/yourusername" class="social-link" target="_blank">GitHub</a>
-                        <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank">LinkedIn</a>
-                        <a href="https://twitter.com/yourusername" class="social-link" target="_blank">Twitter</a>
-                        <a href="https://instagram.com/yourusername" class="social-link" target="_blank">Instagram</a>
+                        <a href="https://github.com/viiiarrr" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/viar" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://instagram.com/viar" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            Instagram
+                        </a>
+                        <a href="mailto:viar@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </a>
                     </div>
                 </div>
 
@@ -245,17 +440,17 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <h3>YOUR NAME</h3>
-                    <p>Studio of [Your Name]</p>
+                    <h3>VIAR</h3>
+                    <p>Studio of Viar</p>
                     <p>Full-Stack Developer</p>
                 </div>
                 <div class="footer-location">
                     <p>Indonesia</p>
-                    <a href="mailto:hello@yourname.com">hello@yourname.com</a>
+                    <a href="mailto:viar@gmail.com">viar@gmail.com</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Your Name. All rights reserved.</p>
+                <p>&copy; 2025 Viar. All rights reserved.</p>
             </div>
         </div>
     </footer>
