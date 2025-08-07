@@ -157,30 +157,3 @@ Add your analytics tracking code to the `<head>` section:
   gtag('config', 'GA_TRACKING_ID');
 </script>
 ```
-
-## 🐛 Troubleshooting
-
-### Common Issues
-- **Loading Screen Stuck**: Check JavaScript console for errors
-- **Animations Not Working**: Ensure AOS library is loaded
-- **Theme Not Saving**: Check localStorage permissions
-- **Images Not Loading**: Verify image paths and formats
-
-### Debug Mode
-Open browser developer tools (F12) to check:
-- Console for JavaScript errors
-- Network tab for loading issues
-- Elements tab for CSS debugging
-
-## 📄 License
-
-This template is free to use for personal and commercial projects.
-
-## 🤝 Contributing
-
-Feel free to submit issues and enhancement requests!
-
----
-
-**Made with ❤️ by Viar**
-# porto

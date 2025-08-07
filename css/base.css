@@ -48,7 +48,7 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
-    cursor: none;
+    cursor: auto;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 

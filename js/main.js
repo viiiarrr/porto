@@ -25,19 +25,8 @@ class PortfolioApp {
     }
 
     handleResize() {
-        // Update custom cursor visibility on resize
-        const cursor = document.querySelector('.cursor');
-        const cursorFollower = document.querySelector('.cursor-follower');
-        
-        if (window.innerWidth <= 768) {
-            document.body.style.cursor = 'auto';
-            if (cursor) cursor.style.display = 'none';
-            if (cursorFollower) cursorFollower.style.display = 'none';
-        } else {
-            document.body.style.cursor = 'none';
-            if (cursor) cursor.style.display = 'block';
-            if (cursorFollower) cursorFollower.style.display = 'block';
-        }
+        // No custom cursor handling needed - using default system cursor
+        console.log('Window resized - using system cursor');
     }
 
     handleVisibilityChange() {
