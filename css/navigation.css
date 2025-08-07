@@ -1,19 +1,19 @@
-/* Navigation Styles */
+/* Navigation Styles - Minimalist Design */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,46 +21,43 @@
 }
 
 .nav-logo a {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     color: var(--text-primary);
     text-decoration: none;
-    letter-spacing: -0.5px;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    letter-spacing: -0.02em;
 }
 
 .nav-menu {
     display: flex;
-    gap: 40px;
+    gap: 60px;
     align-items: center;
 }
 
 .nav-link {
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 300;
     transition: all 0.3s ease;
     position: relative;
     padding: 8px 0;
+    text-transform: lowercase;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary-color);
+    color: var(--text-primary);
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 1px;
     bottom: 0;
     left: 0;
-    background: var(--gradient-primary);
+    background: var(--text-primary);
     transition: width 0.3s ease;
 }
 
@@ -70,34 +67,33 @@
 }
 
 .theme-toggle {
-    margin-left: 20px;
+    margin-left: 30px;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 8px;
-    background: var(--bg-secondary);
+    padding: 8px;
+    border-radius: 50%;
+    background: transparent;
     transition: all 0.3s ease;
-    border: none;
+    border: 1px solid var(--border-color);
     color: var(--text-primary);
 }
 
 .theme-toggle:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: scale(1.1);
+    background: var(--bg-secondary);
+    transform: scale(1.05);
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 5px;
+    padding: 8px;
 }
 
 .hamburger span {
-    width: 25px;
-    height: 2px;
+    width: 24px;
+    height: 1px;
     background: var(--text-primary);
-    margin: 3px 0;
+    margin: 4px 0;
     transition: 0.3s;
-    border-radius: 2px;
+    border-radius: 1px;
 }
